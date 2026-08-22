@@ -69,7 +69,7 @@ img { display: block; max-width: 100%; }
 .hero-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(2,17,45,.95) 0%, rgba(2,17,45,.8) 31%, rgba(2,17,45,.28) 62%, rgba(2,17,45,.12) 100%), linear-gradient(0deg, rgba(2,16,41,.82), transparent 42%);
+  background: linear-gradient(90deg, rgba(2,17,45,.93) 0%, rgba(2,17,45,.72) 31%, rgba(2,17,45,.18) 60%, rgba(2,17,45,.06) 100%), linear-gradient(0deg, rgba(2,16,41,.62), transparent 43%);
 }
 .hero-grid {
   position: absolute;

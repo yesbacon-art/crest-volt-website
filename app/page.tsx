@@ -69,7 +69,7 @@ export default function Home() {
       </header>
 
       <section className="hero" id="top">
-        <img className="hero-image" src="/images/hero-ev.png" alt="CREST VOLTのEV充電ステーション" />
+        <img className="hero-image" src="/images/hero-vision-v2.png" alt="富士山、太陽光発電、風力発電、蓄電設備、EV充電をつなぐCREST VOLTのエネルギービジョン" />
         <div className="hero-shade" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
