@@ -393,3 +393,205 @@ footer { padding: 74px clamp(30px,6vw,100px) 38px; display: grid; grid-template-
   footer { grid-template-columns: 1fr; padding: 62px 24px 32px; }
   .footer-statement,.footer-links { justify-self: start; }
 }
+
+/* 2026 Snow White VI direction — first viewport */
+body { background: #ffffff; }
+.site-header {
+  color: var(--navy);
+  background: rgba(255,255,255,.96);
+  border-bottom-color: rgba(7,26,56,.11);
+  box-shadow: 0 1px 0 rgba(255,255,255,.8);
+  backdrop-filter: blur(20px);
+}
+.brand { background: transparent; }
+.main-nav a:hover { color: var(--green); }
+.main-nav a::after { background: var(--green); }
+.header-meta { color: #738298; border-left-color: rgba(7,26,56,.12); }
+.header-meta span { color: var(--green); }
+.header-meta i { background: rgba(7,26,56,.18); }
+.header-cta { color: white; background: var(--navy); }
+.header-cta:hover { background: var(--green); }
+.hero { color: var(--navy); background: #f4f8fb; }
+.hero-image { object-position: 58% center; filter: saturate(.86) brightness(1.05); }
+.hero-shade {
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.99) 0%,rgba(255,255,255,.96) 28%,rgba(255,255,255,.72) 44%,rgba(255,255,255,.08) 69%,rgba(255,255,255,0) 100%),
+    linear-gradient(0deg,rgba(250,252,253,.96) 0%,transparent 25%);
+}
+.hero-grid {
+  background-image: linear-gradient(rgba(7,26,56,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(7,26,56,.04) 1px,transparent 1px);
+}
+.eyebrow { color: #6f7f93; }
+.eyebrow span { color: var(--green); }
+.eyebrow::before { background: var(--green); }
+.hero h1,.hero h1 em { color: var(--navy); text-shadow: none; }
+.hero h1 em::after { background: linear-gradient(90deg,var(--green),transparent); }
+.hero-copy { color: #5d6f84; }
+.primary-button { background: var(--navy); }
+.primary-button:hover { background: var(--green); }
+.text-link { color: #5e7085; border-bottom-color: rgba(7,26,56,.25); }
+.text-link span { color: var(--green); }
+.hero-caption { color: rgba(7,26,56,.55); }
+.hero-caption b { color: var(--green); }
+.hero-pillars {
+  color: var(--navy);
+  background: rgba(255,255,255,.93);
+  border-top-color: rgba(7,26,56,.12);
+  box-shadow: 0 -18px 50px rgba(7,26,56,.05);
+}
+.hero-pillars a+a { border-left-color: rgba(7,26,56,.12); }
+.hero-pillars span { color: var(--green); }
+.hero-pillars strong { color: var(--navy); }
+.hero-pillars small { color: #7b899a; }
+.hero-pillars i { color: #8391a1; }
+.manifesto { background: #fff; }
+
+@media (max-width: 900px) {
+  .hero-shade { background: linear-gradient(90deg,rgba(255,255,255,.98),rgba(255,255,255,.86) 55%,rgba(255,255,255,.34)),linear-gradient(0deg,rgba(255,255,255,.96),transparent 38%); }
+}
+
+/* Snow White VI direction — full site */
+.section-marker.light { color: #728297; }
+.section-marker.light span { color: var(--green); }
+.section-marker.light::after { background: #c6d0d8; }
+
+.value-platform {
+  color: var(--navy);
+  background: linear-gradient(135deg,#ffffff 0%,#f4f8fb 64%,#edf3f7 100%);
+  border-top: 1px solid #e1e7eb;
+  border-bottom: 1px solid #dbe3e8;
+}
+.value-platform::before {
+  background-image: linear-gradient(rgba(7,26,56,.032) 1px,transparent 1px),linear-gradient(90deg,rgba(7,26,56,.032) 1px,transparent 1px);
+}
+.value-aura { border-color: rgba(7,26,56,.08); box-shadow: inset 0 0 120px rgba(0,173,82,.025); }
+.value-heading>div>p { color: var(--green); }
+.value-heading>p { color: #637387; }
+.value-chain { border-top-color: #cfd8df; border-bottom-color: #d9e1e6; }
+.value-step+.value-step { border-left-color: #d9e1e6; }
+.value-step span { color: var(--green); }
+.value-step b { color: var(--navy); }
+.value-step small { color: #738398; }
+.value-step i { color: var(--green); }
+.value-outcome {
+  color: var(--navy);
+  background: rgba(255,255,255,.82);
+  border: 1px solid #d4dde3;
+  border-top: 2px solid var(--green);
+  box-shadow: 0 22px 60px rgba(7,26,56,.06);
+}
+.value-outcome span { color: var(--green); }
+.value-outcome p { color: #69798c; }
+
+.business { background: #fff; }
+.business-lead { color: var(--navy); background: #f4f7f9; border: 1px solid #dbe3e8; }
+.lead-image::after { background: linear-gradient(90deg,transparent 72%,rgba(255,255,255,.18)),linear-gradient(0deg,rgba(7,26,56,.38),transparent 30%); }
+.lead-copy { background: #fff; }
+.lead-copy .business-no,.business-no { color: var(--green); }
+.lead-copy .business-no span,.business-no span { color: #8290a1; }
+.lead-copy .super { color: var(--green); }
+.lead-copy>p:not(.super) { color: #66768a; }
+.tag-row span { color: var(--navy); border-color: #bfcbd4; background: #fff; }
+.lead-copy>a { color: var(--navy); border-bottom-color: rgba(7,26,56,.25); }
+.lead-copy>a i { color: var(--green); }
+.business-editorial { background: #dce4e9; }
+.editorial-image { color: var(--navy); background: #eef3f6; }
+.editorial-overlay { background: linear-gradient(0deg,rgba(244,248,250,.42),transparent 55%); }
+.editorial-image>div:last-child {
+  inset: auto 24px 24px;
+  padding: 31px 34px;
+  color: var(--navy);
+  background: rgba(255,255,255,.93);
+  border: 1px solid rgba(255,255,255,.84);
+  box-shadow: 0 16px 50px rgba(7,26,56,.12);
+  backdrop-filter: blur(16px);
+}
+.editorial-image span { color: var(--green); }
+.editorial-image p { color: #66768a; }
+.editorial-image b { color: var(--navy); }
+.editorial-plain { background: #fff; }
+.investment-business { color: var(--navy); background: linear-gradient(135deg,#f8fafb,#edf3f7); }
+.investment-business::after { border-color: rgba(7,26,56,.08); }
+.investment-business .business-no span { color: #8290a1; }
+.investment-business .super { color: var(--green); }
+.investment-business>p:not(.super) { color: #66768a; }
+.tag-row.dark span { color: var(--navy); border-color: #c2cdd5; background: rgba(255,255,255,.72); }
+
+.product-stage { background: linear-gradient(90deg,#eef3f6,#ffffff); border-top: 1px solid #dce4e9; border-bottom: 1px solid #dce4e9; }
+.product-image { background: #f4f7f9; }
+
+.technology {
+  color: var(--navy);
+  background: linear-gradient(150deg,#ffffff 0%,#f5f8fa 58%,#eaf1f5 100%);
+  border-bottom: 1px solid #d9e2e7;
+}
+.tech-watermark { color: rgba(7,26,56,.027); }
+.tech-heading>div>p { color: var(--green); }
+.tech-heading>p { color: #647488; }
+.tech-system {
+  background-color: rgba(255,255,255,.72);
+  background-image: linear-gradient(rgba(7,26,56,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(7,26,56,.04) 1px,transparent 1px);
+  border-color: #ccd7df;
+  box-shadow: 0 28px 80px rgba(7,26,56,.07);
+}
+.tech-system::before,.tech-system::after { background: linear-gradient(90deg,transparent,rgba(0,173,82,.35),transparent); }
+.system-core {
+  color: var(--navy);
+  background: radial-gradient(circle,#ffffff,#eef5f3 68%);
+  border-color: rgba(0,173,82,.5);
+  box-shadow: 0 0 80px rgba(0,173,82,.12),0 20px 50px rgba(7,26,56,.08);
+}
+.system-core small { color: #738499; }
+.system-core span { color: var(--green); }
+.system-core i { color: var(--green); border-color: rgba(0,173,82,.3); background: #fff; }
+.system-node { color: var(--navy); background: rgba(255,255,255,.94); border-color: #c8d4dd; box-shadow: 0 12px 30px rgba(7,26,56,.06); }
+.system-node b { color: var(--green); }
+.system-node span { color: #748599; }
+.lab-index { border-color: #cbd6de; background: rgba(255,255,255,.78); }
+.lab-index>div+div { border-left-color: #d5dee4; }
+.lab-index span { color: var(--green); }
+.lab-index small { color: #748498; }
+
+.strategy { background: #fff; }
+.roadmap { color: var(--navy); background: #f3f7f9; border: 1px solid #d4dee5; box-shadow: 0 24px 70px rgba(7,26,56,.055); }
+.roadmap-intro,.phase { background: rgba(255,255,255,.65); }
+.phase { border-left-color: #d6dfe5; }
+.roadmap span { color: var(--green); }
+.roadmap-intro p,.phase p { color: #718196; }
+
+.philosophy {
+  color: var(--navy);
+  background: linear-gradient(125deg,#ffffff 0%,#f6f9fb 55%,#eaf1f5 100%);
+  border-top: 1px solid #dde4e9;
+  border-bottom: 1px solid #d9e2e7;
+}
+.philosophy::before { color: rgba(7,26,56,.025); }
+.philosophy-line { border-color: rgba(0,173,82,.12); }
+.philosophy-lead>p { color: var(--green); }
+.philosophy-grid { border-top-color: #ccd7df; border-bottom-color: #ccd7df; }
+.philosophy-grid article+article { border-left-color: #d4dde3; }
+.philosophy-grid span { color: var(--green); }
+.philosophy-grid p { color: #68788c; }
+
+.contact { background: #fff; border-top: 1px solid #d9e2e7; }
+.contact-brand { background: #fff; }
+.contact-content { color: var(--navy); background: linear-gradient(135deg,#f8fafb,#eaf1f5); border-left: 1px solid #d9e2e7; }
+.contact-content::after { border-color: rgba(7,26,56,.08); }
+.contact-content>p { color: #66768a; }
+.contact-content>a { background: var(--navy); }
+.contact-content>a:hover { background: var(--green); }
+footer { border-top: 1px solid #e0e6ea; }
+
+@media (max-width: 900px) {
+  .value-step,.value-step+.value-step { border-top-color: #d8e1e6; }
+  .lab-index>div:nth-child(3),.lab-index>div:nth-child(4) { border-top-color: #d5dee4; }
+  .philosophy-grid article+article { border-top-color: #d4dde3; }
+  .phase:last-child { border-top-color: #d6dfe5; }
+  .contact-content { border-left: 0; border-top: 1px solid #d9e2e7; }
+}
+
+@media (max-width: 580px) {
+  .editorial-image>div:last-child { inset: auto 12px 12px; padding: 27px 24px; }
+  .lab-index>div,.lab-index>div:nth-child(3),.lab-index>div:nth-child(4) { border-top-color: #d5dee4; }
+  .phase,.phase:last-child { border-top-color: #d6dfe5; }
+}

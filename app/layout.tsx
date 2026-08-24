@@ -10,13 +10,13 @@ export const metadata: Metadata = {
     description: '太陽光、蓄電、EVインフラ、EPC、投資開発をつなぐ、日本発の次世代エネルギーインフラ企業。',
     type: 'website',
     locale: 'ja_JP',
-    images: [{ url: '/og-v2.png', width: 1200, height: 630, alt: 'CREST VOLT' }],
+    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'CREST VOLT — エネルギーの未来を、確かな技術で。' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'CREST VOLT | エネルギーの未来を、確かな技術で。',
     description: '太陽光、蓄電、EVインフラ、EPC、投資開発をつなぐ、日本発の次世代エネルギーインフラ企業。',
-    images: ['/og-v2.png'],
+    images: ['/og.png'],
   },
 };
 
