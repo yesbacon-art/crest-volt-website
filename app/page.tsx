@@ -25,13 +25,13 @@ export default function Home() {
           <img src={asset('/images/crest-volt-logo-horizontal.png')} alt="CREST VOLT" />
         </a>
         <nav className="main-nav" aria-label="メインナビゲーション">
-          <a href="#about">企業情報</a><a href="#business">事業領域</a><a href="#technology">技術開発</a><a href="#strategy">投資・成長戦略</a>
+          <a href={asset('/company')}>企業情報</a><a href={asset('/business')}>事業領域</a><a href={asset('/technology')}>技術開発</a><a href={asset('/investment')}>投資・成長戦略</a>
         </nav>
         <div className="header-meta"><span>JP</span><i />日本語</div>
-        <a className="header-cta" href="#contact"><span>CONTACT</span><b>↗</b></a>
+        <a className="header-cta" href={asset('/contact')}><span>CONTACT</span><b>↗</b></a>
         <details className="mobile-menu">
           <summary>MENU <span>＋</span></summary>
-          <div><a href="#about">企業情報</a><a href="#business">事業領域</a><a href="#technology">技術開発</a><a href="#strategy">投資・成長戦略</a><a href="#contact">お問い合わせ</a></div>
+          <div><a href={asset('/company')}>企業情報</a><a href={asset('/business')}>事業領域</a><a href={asset('/technology')}>技術開発</a><a href={asset('/investment')}>投資・成長戦略</a><a href={asset('/contact')}>お問い合わせ</a></div>
         </details>
       </header>
 
@@ -42,7 +42,7 @@ export default function Home() {
           <p className="eyebrow"><span>CREST VOLT / JAPAN</span><b>NEXT-GENERATION ENERGY INFRASTRUCTURE</b></p>
           <h1>エネルギーの未来を、<br /><em>確かな技術で。</em></h1>
           <p className="hero-copy">発電・蓄電・充電・制御を統合し、<br />日本の次代を支えるエネルギー基盤をつくる。</p>
-          <div className="hero-actions"><a className="primary-button" href="#business"><small>OUR BUSINESS</small>事業領域を見る <span>↗</span></a><a className="text-link" href="#about">SCROLL TO DISCOVER <span>↓</span></a></div>
+          <div className="hero-actions"><a className="primary-button" href={asset('/business')}><small>OUR BUSINESS</small>事業領域を見る <span>↗</span></a><a className="text-link" href="#about">SCROLL TO DISCOVER <span>↓</span></a></div>
         </div>
         <div className="hero-caption" aria-hidden="true"><span>ENGINEERING THE FUTURE OF ENERGY</span><b>35.3606° N / JAPAN</b></div>
         <div className="hero-pillars">{businessIndex.map(([no, item, jp]) => <a href="#business" key={item}><span>{no}</span><div><strong>{item}</strong><small>{jp}</small></div><i>↗</i></a>)}</div>
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="section-shell value-inner">
           <div className="section-marker light"><span>02</span><b>INTEGRATED VALUE CREATION</b></div>
           <div className="value-heading"><div><p>ENERGY × CAPITAL × ENGINEERING × DIGITAL</p><h2>エネルギーを、<br />社会インフラへ変える。</h2></div><p>案件の発見から投資、EPC、制御、長期運用まで。分断されがちな工程を統合することで、設備を持続的な資産価値へ変えていきます。</p></div>
-          <div className="value-chain">{valueChain.map(([no, en, jp], index) => <div key={no} className="value-step"><span>{no}</span><b>{en}</b><small>{jp}</small>{index < valueChain.length - 1 && <i>→</i>}</div>)}</div>
+          <div className="value-chain">{valueChain.map(([no, en, jp], index) => <div key={no} className="value-step"><span>{no}</span><b>{en}</b><small>{jp}</small>{index < valueChain.length - 1 ? <i>→</i> : null}</div>)}</div>
           <div className="value-outcome"><span>LONG-TERM VALUE</span><strong>20+ YEARS ENERGY ASSET DESIGN</strong><p>長期視点で価値を生み続ける、エネルギー資産へ。</p></div>
         </div>
       </section>
@@ -155,7 +155,7 @@ export default function Home() {
 
       <footer>
         <div className="footer-brand"><img src={asset('/images/crest-volt-logo-horizontal.png')} alt="CREST VOLT" /><p>CREST VOLT株式会社<br />クレストヴォルト株式会社</p></div>
-        <div className="footer-statement">エネルギーの未来を、<br />確かな技術で。</div><div className="footer-links"><a href="#about">企業情報</a><a href="#business">事業領域</a><a href="#technology">技術開発</a><a href="#strategy">成長戦略</a><a href="#contact">お問い合わせ</a></div><p className="copyright">© 2026 CREST VOLT INC. ALL RIGHTS RESERVED.</p>
+        <div className="footer-statement">エネルギーの未来を、<br />確かな技術で。</div><div className="footer-links"><a href={asset('/company')}>企業情報</a><a href={asset('/business')}>事業領域</a><a href={asset('/technology')}>技術開発</a><a href={asset('/investment')}>成長戦略</a><a href={asset('/sustainability')}>サステナビリティ</a><a href={asset('/contact')}>お問い合わせ</a></div><p className="copyright">© 2026 CREST VOLT INC. ALL RIGHTS RESERVED.</p>
       </footer>
     </main>
   );
