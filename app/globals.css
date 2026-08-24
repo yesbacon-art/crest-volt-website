@@ -82,7 +82,7 @@ img { display: block; max-width: 100%; }
 .hero-caption { position: absolute; right: clamp(28px, 4.7vw, 80px); bottom: 124px; z-index: 3; display: grid; justify-items: end; gap: 8px; color: white; text-shadow: 0 2px 14px rgba(3,20,47,.6); }
 .hero-caption span { font: 600 8px/1 "Avenir Next", Montserrat, sans-serif; letter-spacing: .2em; }
 .hero-caption b { font: 500 9px/1 "Avenir Next", Montserrat, sans-serif; letter-spacing: .13em; }
-.hero-pillars { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding: 0 clamp(28px, 8.2vw, 140px); color: white; background: rgba(3,20,47,.91); border-top: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); }
+.hero-pillars { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 0 clamp(28px, 8.2vw, 140px); color: white; background: rgba(3,20,47,.91); border-top: 1px solid rgba(255,255,255,.18); backdrop-filter: blur(12px); }
 .hero-pillars div { min-height: 86px; padding: 0 18px 0 0; display: flex; align-items: center; color: #dce4ec; }
 .hero-pillars div + div { border-left: 1px solid rgba(255,255,255,.16); padding-left: 24px; }
 .hero-pillars span { margin-right: 17px; color: var(--green-light); font: 600 9px/1 "Avenir Next", Montserrat, sans-serif; }
@@ -100,6 +100,10 @@ img { display: block; max-width: 100%; }
 .identity-statement h2 em { color: var(--green); font-style: normal; }
 .identity-copy { padding-top: 46px; color: #5d6d80; font-size: 14px; line-height: 2.15; }
 .identity-copy p { margin: 0 0 24px; }
+.company-id { padding: 0 0 22px; border-bottom: 1px solid var(--line); }
+.company-id strong, .company-id span { display: block; }
+.company-id strong { color: var(--navy); font-size: 15px; letter-spacing: .035em; }
+.company-id span { margin-top: 7px; color: #8794a3; font: 600 8px/1.5 "Avenir Next", Montserrat, sans-serif; letter-spacing: .08em; }
 .identity-fields { grid-column: 2 / -1; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .identity-fields div { min-height: 120px; padding: 25px 20px; display: grid; align-content: center; }
 .identity-fields div + div { border-left: 1px solid var(--line); }
@@ -139,14 +143,17 @@ img { display: block; max-width: 100%; }
 .area-card { position: relative; min-height: 480px; overflow: hidden; color: white; background: var(--navy); }
 .area-card > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
 .area-card:hover > img { transform: scale(1.035); }
-.area-development > img { object-position: 57% center; }
+.area-solar > img { object-position: 57% center; }
 .area-storage > img { object-position: 60% center; }
 .area-ev > img { object-position: 65% center; }
 .area-screen { position: absolute; inset: 0; background: linear-gradient(95deg, rgba(4,20,47,.92), rgba(4,20,47,.34) 72%), linear-gradient(0deg, rgba(4,20,47,.7), transparent 52%); }
-.area-technology { background-image: radial-gradient(circle at 73% 32%, rgba(0,176,80,.28), transparent 23%), linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: auto, 52px 52px, 52px 52px; }
-.area-technology::before, .area-technology::after { content: ""; position: absolute; border: 1px solid rgba(103,223,157,.3); border-radius: 50%; }
-.area-technology::before { width: 360px; height: 360px; right: -70px; top: -85px; }
-.area-technology::after { width: 220px; height: 220px; right: 0; top: -15px; }
+.area-epc { background-image: radial-gradient(circle at 73% 32%, rgba(0,176,80,.28), transparent 23%), linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: auto, 52px 52px, 52px 52px; }
+.area-epc::before, .area-epc::after { content: ""; position: absolute; border: 1px solid rgba(103,223,157,.3); border-radius: 50%; }
+.area-epc::before { width: 360px; height: 360px; right: -70px; top: -85px; }
+.area-epc::after { width: 220px; height: 220px; right: 0; top: -15px; }
+.area-investment { grid-column: 1 / -1; min-height: 430px; }
+.area-investment > img { object-position: 58% 62%; }
+.area-investment .area-content { min-height: 430px; padding-right: 52%; }
 .area-content { position: relative; z-index: 2; min-height: 480px; padding: 44px 48px; display: flex; flex-direction: column; align-items: flex-start; }
 .area-number { color: var(--green-light); font: 600 9px/1 "Avenir Next", Montserrat, sans-serif; }
 .area-en { margin: 66px 0 12px; color: #aab9c8; font: 600 9px/1 "Avenir Next", Montserrat, sans-serif; letter-spacing: .18em; }
@@ -241,7 +248,7 @@ img { display: block; max-width: 100%; }
 .principle-heading { margin-top: 64px; display: grid; grid-template-columns: 1.25fr .75fr; gap: 90px; align-items: end; }
 .principle-heading h2 { margin: 0; font-size: clamp(39px, 3.8vw, 58px); line-height: 1.46; letter-spacing: -.045em; }
 .principle-heading p { margin: 0 0 8px; color: #9aa9ba; font-size: 14px; line-height: 2.05; }
-.principle-grid { margin-top: 74px; display: grid; grid-template-columns: repeat(4,1fr); border-top: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); }
+.principle-grid { margin-top: 74px; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid rgba(255,255,255,.16); border-bottom: 1px solid rgba(255,255,255,.16); }
 .principle-grid article { position: relative; min-height: 280px; padding: 34px 28px; }
 .principle-grid article + article { border-left: 1px solid rgba(255,255,255,.13); }
 .principle-grid span { color: var(--green-light); font: 600 8px/1 "Avenir Next", Montserrat, sans-serif; }
@@ -324,9 +331,8 @@ footer { position: relative; padding: 70px clamp(28px, 6vw, 100px) 38px; display
   .region-line { grid-template-columns: 1fr 1fr; }
   .region-line article:nth-child(3) { border-left: 0; border-top: 1px solid #cdd6dd; }
   .region-line article:nth-child(4) { border-top: 1px solid #cdd6dd; }
-  .principle-grid { grid-template-columns: 1fr 1fr; }
-  .principle-grid article:nth-child(3) { border-left: 0; border-top: 1px solid rgba(255,255,255,.13); }
-  .principle-grid article:nth-child(4) { border-top: 1px solid rgba(255,255,255,.13); }
+  .principle-grid { grid-template-columns: 1fr; }
+  .principle-grid article + article { border-left: 0; border-top: 1px solid rgba(255,255,255,.13); }
   .contact { grid-template-columns: .62fr 1.38fr; gap: 55px; }
   footer { grid-template-columns: 1fr 1fr; }
   .footer-message { justify-self: end; }
@@ -351,6 +357,7 @@ footer { position: relative; padding: 70px clamp(28px, 6vw, 100px) 38px; display
   .hero-pillars div { min-height: 48px; padding: 10px 7px 10px 0; border-top: 1px solid rgba(255,255,255,.08); }
   .hero-pillars div + div { padding-left: 9px; }
   .hero-pillars div:nth-child(3) { border-left: 0; }
+  .hero-pillars div:nth-child(5) { grid-column: 1 / -1; border-left: 0; justify-content: center; }
   .hero-pillars strong { font-size: 7px; letter-spacing: .11em; }
   .desktop-only { display: none; }
   .identity { padding-top: 88px; padding-bottom: 92px; grid-template-columns: 1fr; }
@@ -368,6 +375,8 @@ footer { position: relative; padding: 70px clamp(28px, 6vw, 100px) 38px; display
   .section-heading, .strategy-heading, .principle-heading { margin-top: 52px; }
   .area-grid { margin-top: 58px; }
   .area-card, .area-content { min-height: 410px; }
+  .area-investment { grid-column: auto; }
+  .area-investment .area-content { min-height: 410px; padding-right: 25px; }
   .area-content { padding: 31px 25px; }
   .area-en { margin-top: 50px; }
   .area-copy { font-size: 12px; }

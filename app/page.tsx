@@ -2,49 +2,58 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const asset = (path: string) => `${basePath}${path}`;
 
 const lifecycle = [
-  ['01', 'DISCOVER', '事業機会の発見', '土地・系統・市場性を精査'],
-  ['02', 'DEVELOP', '事業価値の設計', '技術・収益モデルを統合'],
-  ['03', 'INVEST', '長期視点の投資', '自己投資・共同投資・SPC'],
-  ['04', 'INTEGRATE', '技術による最適化', '蓄電・EMS・AIを実装'],
-  ['05', 'OPERATE', '資産価値の運用', 'データで性能と収益を管理'],
+  ['01', 'DEVELOP', '事業を開発する', '地域・系統・需要から機会を発見'],
+  ['02', 'INVEST', '資本を組成する', '自己投資・共同投資・SPC'],
+  ['03', 'ENGINEER', '設備を構築する', '設計・調達・施工・試運転'],
+  ['04', 'CONTROL', '技術で制御する', 'EMS・AI・VPPを実装'],
+  ['05', 'OPERATE', '資産を運用する', 'O&Mとデータで価値を高める'],
 ];
 
 const businessAreas = [
   {
     number: '01',
-    en: 'ENERGY DEVELOPMENT',
-    title: '再生可能エネルギー開発',
-    copy: '地域資源と事業性を見極め、太陽光・蓄電池併設型発電所・PPAを長期資産として開発します。',
+    en: 'SOLAR ENERGY SOLUTIONS',
+    title: '太陽光発電事業',
+    copy: '産業用屋根・地上設置・自家消費型・PPAから高圧／特別高圧まで、開発・EPC・O&Mを一貫して提供します。',
     image: asset('/images/hero-vision-v2.png'),
-    className: 'area-development',
-    tags: ['SOLAR', 'PPA', 'PROJECT DEVELOPMENT'],
+    className: 'area-solar',
+    tags: ['SOLAR', 'PPA', 'EPC / O&M'],
   },
   {
     number: '02',
-    en: 'ENERGY STORAGE',
+    en: 'CREST VOLT STORAGE',
     title: '蓄電システム',
-    copy: '家庭から系統規模まで。電力調整、ピークカット、BCP、再エネ活用を支えるC-ESSを展開します。',
+    copy: '系統用BESS、産業用蓄電、光蓄一体化から需給調整まで。電力の安定性と事業価値を同時に高めます。',
     image: asset('/images/c-ess-grid.png'),
     className: 'area-storage',
     tags: ['C-ESS HOME', 'C-ESS C&I', 'C-ESS GRID'],
   },
   {
     number: '03',
-    en: 'EV INFRASTRUCTURE',
-    title: 'EVエネルギーインフラ',
-    copy: '急速充電、企業ネットワーク、商業施設のエネルギー管理を、再エネ・蓄電と一体で設計します。',
+    en: 'EV CHARGING INFRASTRUCTURE',
+    title: 'EV充電インフラ事業',
+    copy: '設計・機器・電気工事・エネルギー管理・保守まで。商業施設、物流、集合住宅、企業フリートを一体で支えます。',
     image: asset('/images/c-charge-station.png'),
     className: 'area-ev',
     tags: ['C-CHARGE', 'FAST CHARGE', 'ENERGY NETWORK'],
   },
   {
     number: '04',
-    en: 'ENERGY TECHNOLOGY',
-    title: 'エネルギー技術開発',
-    copy: 'C-EMS、AI Energy Cloud、VPPを通じ、分散するエネルギー資産の運用と価値を最適化します。',
+    en: 'ENERGY EPC',
+    title: 'エネルギーEPC事業',
+    copy: 'Engineering、Procurement、Construction、Commissioning、O&M。長期運用を見据えた品質で、設備を社会インフラへ変えます。',
     image: '',
-    className: 'area-technology',
-    tags: ['C-EMS', 'AI ENERGY CLOUD', 'VPP'],
+    className: 'area-epc',
+    tags: ['ENGINEERING', 'CONSTRUCTION', 'O&M'],
+  },
+  {
+    number: '05',
+    en: 'INVESTMENT & DEVELOPMENT',
+    title: 'エネルギー開発・投資事業',
+    copy: '太陽光・BESS・PPAなどのエネルギー資産を、案件開発、SPC組成、共同投資、M&Aまで長期視点で推進します。',
+    image: asset('/images/hero-vision-v2.png'),
+    className: 'area-investment',
+    tags: ['ASSET DEVELOPMENT', 'SPC / M&A', 'CO-INVESTMENT'],
   },
 ];
 
@@ -58,7 +67,7 @@ export default function Home() {
         <nav className="main-nav" aria-label="メインナビゲーション">
           <a href="#about"><span>ABOUT</span>私たちについて</a>
           <a href="#business"><span>BUSINESS</span>事業領域</a>
-          <a href="#technology"><span>TECHNOLOGY</span>技術開発</a>
+          <a href="#technology"><span>CREST VOLT LAB</span>技術開発</a>
           <a href="#strategy"><span>STRATEGY</span>成長戦略</a>
         </nav>
         <a className="header-cta" href="#contact"><span>CONTACT</span>お問い合わせ <b>↗</b></a>
@@ -67,7 +76,7 @@ export default function Home() {
           <div>
             <a href="#about">私たちについて</a>
             <a href="#business">事業領域</a>
-            <a href="#technology">技術開発</a>
+            <a href="#technology">CREST VOLT LAB</a>
             <a href="#strategy">成長戦略</a>
             <a href="#contact">お問い合わせ</a>
           </div>
@@ -79,12 +88,12 @@ export default function Home() {
         <div className="hero-shade" />
         <div className="hero-grid" aria-hidden="true" />
         <div className="hero-content">
-          <p className="eyebrow"><span /> JAPAN ENERGY ASSET PLATFORM</p>
-          <p className="hero-jp-line">次世代エネルギー価値を創造する。</p>
-          <h1>未来のエネルギーを、<br /><em>価値ある資産</em>へ。</h1>
+          <p className="eyebrow"><span /> NEXT-GENERATION ENERGY INFRASTRUCTURE</p>
+          <p className="hero-jp-line">次世代エネルギーインフラ企業</p>
+          <h1>エネルギーの未来を、<br /><em>確かな技術で。</em></h1>
           <p className="hero-copy">
-            再生可能エネルギーの開発・投資・技術・運用をつなぎ、<br className="desktop-only" />
-            日本の未来を支えるエネルギー資産を創造します。
+            発電・蓄電・充電・制御をひとつにつなぎ、<br className="desktop-only" />
+            持続可能で強靭な日本の社会インフラを構築します。
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#business"><small>OUR BUSINESS</small>事業領域を見る <span>→</span></a>
@@ -96,7 +105,7 @@ export default function Home() {
           <b>JAPAN / 35.3606° N</b>
         </div>
         <div className="hero-pillars">
-          {['DEVELOPMENT', 'INVESTMENT', 'TECHNOLOGY', 'OPERATION'].map((item, index) => (
+          {['SOLAR', 'STORAGE', 'EV INFRA', 'ENERGY EPC', 'INVESTMENT'].map((item, index) => (
             <div key={item}><span>0{index + 1}</span><strong>{item}</strong></div>
           ))}
         </div>
@@ -106,22 +115,23 @@ export default function Home() {
         <div className="section-label"><span>01</span><b>ABOUT CREST VOLT</b></div>
         <div className="identity-logo">
           <img src={asset('/images/crest-volt-logo-stacked.png')} alt="CREST VOLT ブランドロゴ" />
-          <p>ENERGY FOR<br />A BETTER TOMORROW</p>
+          <p>ENGINEERING THE<br />FUTURE OF ENERGY.</p>
         </div>
         <div className="identity-statement">
-          <p className="jp-intro">「山の頂〈CREST〉」を目指し、<br />クリーンエネルギーの力で未来を切り拓く。</p>
-          <h2>設備ではなく、<br />未来価値を生む<br /><em>エネルギー資産</em>を。</h2>
+          <p className="jp-intro">最高水準の品質と信頼性を追求し、<br />高度な技術で、エネルギーの未来をつくる。</p>
+          <h2>日本を代表する、<br /><em>次世代エネルギー</em><br />インフラ企業へ。</h2>
         </div>
         <div className="identity-copy">
-          <p>CREST VOLTは、日本発の次世代エネルギー開発・投資・技術企業です。</p>
-          <p>再生可能エネルギーの可能性を最大限に引き出し、開発から長期運用までを一貫して担うことで、持続可能な社会を支えるエネルギープラットフォームを構築します。</p>
+          <p className="company-id"><strong>CREST VOLT株式会社</strong><span>クレストヴォルト株式会社 / CREST VOLT Inc.</span></p>
+          <p>エネルギー資産の開発、投資、建設、制御、運用を一貫して担う、日本発の次世代エネルギーインフラ企業です。</p>
+          <p>CRESTは最高基準と信頼品質を、VOLTは電力・蓄電・系統・EV・制御技術を象徴します。</p>
         </div>
         <div className="identity-fields">
           {[
-            ['01', 'RENEWABLE ENERGY', '再生能源开发'],
-            ['02', 'ENERGY INVESTMENT', '能源资产投资'],
-            ['03', 'ENERGY OPERATION', '能源运营管理'],
-            ['04', 'ENERGY TECHNOLOGY', '能源技术研发'],
+            ['01', 'RELIABILITY', '信頼性'],
+            ['02', 'TECHNOLOGY', '技術'],
+            ['03', 'ENERGY', 'エネルギー'],
+            ['04', 'INFRASTRUCTURE', '社会基盤'],
           ].map(([no, en, cn]) => (
             <div key={no}><span>{no}</span><strong>{en}</strong><small>{cn}</small></div>
           ))}
@@ -134,10 +144,10 @@ export default function Home() {
           <div className="section-label light"><span>02</span><b>ENERGY VALUE CREATION</b></div>
           <div className="asset-heading">
             <div>
-              <p>DEVELOPMENT × INVESTMENT × TECHNOLOGY × OPERATION</p>
-              <h2>エネルギーを、<br />長期資産へ変える。</h2>
+              <p>DEVELOPMENT × INVESTMENT × EPC × CONTROL × OPERATION</p>
+              <h2>エネルギーを、<br />社会インフラへ変える。</h2>
             </div>
-            <p>CREST VOLTは、単に設備を建設する会社ではありません。事業機会を見つけ、投資し、技術で価値を高め、長期にわたり運用することで、社会と資本の双方に価値を生み出します。</p>
+            <p>CREST VOLTは、設備を販売するだけの会社ではありません。案件開発から投資、EPC、デジタル制御、長期運用までを統合し、安全で効率的なエネルギー環境を実現します。</p>
           </div>
           <div className="lifecycle">
             {lifecycle.map(([no, en, title, copy], index) => (
@@ -151,8 +161,8 @@ export default function Home() {
           </div>
           <div className="asset-result">
             <span>CREST VOLT VALUE</span>
-            <strong>LONG-TERM ENERGY ASSET</strong>
-            <p>20年先も価値を生み続ける、持続可能なエネルギー資産へ。</p>
+            <strong>INTEGRATED ENERGY INFRASTRUCTURE</strong>
+            <p>発電・蓄電・充電・制御が連携する、強靭な社会基盤へ。</p>
           </div>
         </div>
       </section>
@@ -160,8 +170,8 @@ export default function Home() {
       <section className="business section-shell" id="business">
         <div className="section-label"><span>03</span><b>BUSINESS PORTFOLIO</b></div>
         <div className="section-heading">
-          <h2>日本のエネルギー転換を支える、<br /><em>4つの事業領域。</em></h2>
-          <p>発電する。蓄える。動かす。つなぐ。<br />領域を横断する事業力で、エネルギー資産の価値を最大化します。</p>
+          <h2>日本の次代を支える、<br /><em>5つの事業基盤。</em></h2>
+          <p>太陽光、蓄電、EV、EPC、投資開発。<br />技術・工程・資本をつなぎ、インフラとしての価値を最大化します。</p>
         </div>
         <div className="area-grid">
           {businessAreas.map((area) => (
@@ -219,14 +229,14 @@ export default function Home() {
 
       <section className="technology section-shell" id="technology">
         <div className="tech-copy">
-          <div className="section-label"><span>06</span><b>TECHNOLOGY CONCEPT</b></div>
-          <p className="tech-formula">Energy <i>×</i> Digital <i>×</i> Asset</p>
-          <h2>分散するエネルギーを、<br />ひとつの知性へ。</h2>
-          <p>C-EMSとAI Energy Cloudが、発電予測、蓄電制御、需要最適化、資産分析を統合。複数のエネルギー資産をリアルタイムにつなぎ、最適な運用判断を導きます。</p>
-          <div className="tech-tags"><span>C-EMS</span><span>AI ENERGY CLOUD</span><span>VPP</span></div>
+          <div className="section-label"><span>06</span><b>CREST VOLT LAB / 技術開発センター</b></div>
+          <p className="tech-formula">C-EMS <i>×</i> AI <i>×</i> VPP</p>
+          <h2>エネルギーを制御し、<br />インフラを進化させる。</h2>
+          <p>負荷予測、蓄電制御、光蓄充協調、遠隔監視、予知保全を実装。分散するエネルギー設備をデータでつなぎ、安全性・効率・資産価値を継続的に高めます。</p>
+          <div className="tech-tags"><span>EMS</span><span>AI LOAD FORECAST</span><span>ENERGY IoT</span><span>DEMAND RESPONSE</span><span>VPP / V2G</span></div>
         </div>
         <div className="energy-console" aria-label="C-EMS エネルギー管理概念図">
-          <div className="console-head"><span>C-EMS / LIVE ASSET CONTROL</span><b>ONLINE</b></div>
+          <div className="console-head"><span>CREST VOLT LAB / LIVE ASSET CONTROL</span><b>ONLINE</b></div>
           <div className="console-core">
             <div className="energy-node node-solar"><span>PV</span><b>GENERATE</b></div>
             <div className="energy-node node-storage"><span>ESS</span><b>STORE</b></div>
@@ -268,13 +278,12 @@ export default function Home() {
 
       <section className="principles">
         <div className="section-shell">
-          <div className="section-label light"><span>08</span><b>TRUSTED ENERGY PARTNER</b></div>
-          <div className="principle-heading"><h2>信頼を積み重ね、<br />未来へつなぐ。</h2><p>エネルギー事業は、数十年にわたる責任です。安全・品質・透明性・共創を、すべての事業判断の基準とします。</p></div>
+          <div className="section-label light"><span>08</span><b>CORPORATE PHILOSOPHY</b></div>
+          <div className="principle-heading"><h2>社会を支える責任を、<br />技術の力で果たす。</h2><p>エネルギーは、暮らしと産業を支える基盤です。CREST VOLTは、確かな技術と長期視点で、その責任に向き合います。</p></div>
           <div className="principle-grid">
-            <article><span>01</span><b>TRUST</b><h3>信頼</h3><p>長期運用を前提とした安全、品質、責任。</p></article>
-            <article><span>02</span><b>INNOVATION</b><h3>革新</h3><p>AI・EMS・蓄電技術による継続的な進化。</p></article>
-            <article><span>03</span><b>SUSTAINABILITY</b><h3>持続</h3><p>環境、地域、経済性をつなぐ事業運営。</p></article>
-            <article><span>04</span><b>PARTNERSHIP</b><h3>共創</h3><p>自治体、金融、企業、技術パートナーとの連携。</p></article>
+            <article><span>01</span><b>PURPOSE / 存在意義</b><h3>強靭な社会基盤をつくる。</h3><p>エネルギー技術を通じて、持続可能で強靭な社会インフラを構築する。</p></article>
+            <article><span>02</span><b>MISSION / 使命</b><h3>発電・蓄電・充電・制御を統合する。</h3><p>より安全で効率的なエネルギー環境を、技術と運用の両面から実現する。</p></article>
+            <article><span>03</span><b>VISION / 目指す姿</b><h3>日本を代表する企業へ。</h3><p>日本の次代を支える、信頼されるエネルギーインフラ企業を目指す。</p></article>
           </div>
         </div>
       </section>
@@ -284,8 +293,8 @@ export default function Home() {
         <img src={asset('/images/crest-volt-logo-stacked.png')} alt="" />
         <div>
           <div className="section-label light"><span>09</span><b>PARTNER WITH CREST VOLT</b></div>
-          <h2>エネルギーで、<br />ともに未来価値を。</h2>
-          <p>事業開発、投資、技術、地域連携に関するご相談をお待ちしています。</p>
+          <h2>次のエネルギー基盤を、<br />ともにつくる。</h2>
+          <p>太陽光、蓄電、EVインフラ、EPC、投資開発、技術連携に関するご相談をお待ちしています。</p>
           <a href="mailto:info@crestvolt.co.jp"><span>お問い合わせ</span><b>CONTACT US</b><i>↗</i></a>
         </div>
       </section>
@@ -293,9 +302,9 @@ export default function Home() {
       <footer>
         <div className="footer-top">
           <img src={asset('/images/crest-volt-logo-horizontal.png')} alt="CREST VOLT" />
-          <p>CREST VOLT 株式会社</p>
+          <p>CREST VOLT株式会社 / クレストヴォルト株式会社</p>
         </div>
-        <div className="footer-message">Creating Future Value<br />Through Energy.</div>
+        <div className="footer-message">Engineering the Future<br />of Energy.</div>
         <div className="footer-links"><a href="#about">会社概要</a><a href="#business">事業領域</a><a href="#technology">技術開発</a><a href="#contact">お問い合わせ</a></div>
         <p className="copyright">© 2026 CREST VOLT. ALL RIGHTS RESERVED.</p>
       </footer>
